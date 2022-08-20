@@ -1,9 +1,7 @@
 package com.DesignPatterns.pagamentoPattern.controller;
 
 import com.DesignPatterns.pagamentoPattern.model.RecebimentoModel;
-import com.DesignPatterns.pagamentoPattern.model.pagamentos.CalculoPagamentoFactory;
 import com.DesignPatterns.pagamentoPattern.model.recebimentos.CalculoDeRecebimentos;
-import com.DesignPatterns.pagamentoPattern.model.recebimentos.RecebimentoFactory;
 import com.DesignPatterns.pagamentoPattern.service.RecebimentoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
