@@ -4,9 +4,9 @@ import com.DesignPatterns.pagamentoPattern.model.RecebimentoModel;
 
 import java.math.BigDecimal;
 
-public class DinheiroPixCheque implements CalculoDeRecebimentos{
+public class DinheiroPixCheque implements CalculoDeRecebimentos {
     @Override
     public BigDecimal calculoDeRecebimentos(RecebimentoModel recebimentoModel) {
-        return BigDecimal.valueOf(0) ;
+        return BigDecimal.valueOf(0);
     }
 }
