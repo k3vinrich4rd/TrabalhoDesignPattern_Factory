@@ -25,6 +25,12 @@ public class RecebimentoService {
         return recebimentoRepository.findById(id);
     }
 
+    public List<RecebimentoModel> statusRecebimento(String statusDoRecebimento){
+        return recebimentoRepository.findByStatusDoRecebimento(statusDoRecebimento);
+    }
+
+
+
     public RecebimentoModel cadastrarRecebimento(RecebimentoModel recebimentoModel, CalculoDeRecebimentos calculoDeRecebimentos) {
         BigDecimal resultado = RecebimentoFactory.tipoRecebimento(recebimentoModel.getStatusDoRecebimento()).calculoDeRecebimentos(recebimentoModel);
         recebimentoModel.setValorPago(recebimentoModel.getValorAPagar().subtract(resultado));

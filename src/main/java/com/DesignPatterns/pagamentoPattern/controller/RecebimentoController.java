@@ -26,6 +26,11 @@ public class RecebimentoController {
         return recebimentoService.exibirViaID(id);
     }
 
+    @GetMapping(path = "/forma/{statusDoRecebimento}")
+    public List<RecebimentoModel> findByStatusDoRecebimento(@PathVariable String statusDoRecebimento){
+        return recebimentoService.statusRecebimento(statusDoRecebimento);
+    }
+
     @PostMapping
     public RecebimentoModel cadastrarNovoRecebimento(@RequestBody RecebimentoModel recebimentoModel, CalculoDeRecebimentos calculoDeRecebimentos) {
         return recebimentoService.cadastrarRecebimento(recebimentoModel, calculoDeRecebimentos);
